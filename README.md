@@ -19,6 +19,7 @@ Run:
 5. Build and run for Android or iOS (all options are available in `package.json`):
 
 Run:
+
     # Android
     yarn run-android:base:dev
 
