@@ -1,0 +1,13 @@
+diff --git a/node_modules/eslint-plugin-module-resolver/dist/rules/use-alias.js b/node_modules/eslint-plugin-module-resolver/dist/rules/use-alias.js
+index b794fc5..26bbb3f 100644
+--- a/node_modules/eslint-plugin-module-resolver/dist/rules/use-alias.js
++++ b/node_modules/eslint-plugin-module-resolver/dist/rules/use-alias.js
+@@ -184,7 +184,7 @@ module.exports = {
+       var isAliased = aliasPaths.some(function (aliasPath) {
+         return isAliasPath(resolvedPath, aliasPath);
+       });
+-      var error = isAliased && pathExists && val.match(/\.\.\//); // matches, exists, and starts with ../,
++      var error = isAliased && pathExists && (val.match(/\.\.\//) || val.match(/\.\//)); // matches, exists, and starts with ../ or ./,
+ 
+       return error && {
+         suggestFix: true,

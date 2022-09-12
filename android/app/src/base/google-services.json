@@ -1,0 +1,118 @@
+{
+  "project_info": {
+    "project_number": "325498537816",
+    "project_id": "flh-tvseries",
+    "storage_bucket": "flh-tvseries.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:325498537816:android:c9ab2b4adfdaec679f072d",
+        "android_client_info": {
+          "package_name": "com.tvseries.base"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "325498537816-lghq3vqicp432dcskf89ddao0tre0c54.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIzpjEjw0sIf9k_pTZ-8gWqNLkLNuq_8Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "325498537816-lghq3vqicp432dcskf89ddao0tre0c54.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "325498537816-aetb6rmnps1tvenf411fpn2qv9hju3fn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.tvseries.base"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:325498537816:android:9043b685ca683f3c9f072d",
+        "android_client_info": {
+          "package_name": "com.tvseries.base.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "325498537816-lghq3vqicp432dcskf89ddao0tre0c54.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIzpjEjw0sIf9k_pTZ-8gWqNLkLNuq_8Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "325498537816-lghq3vqicp432dcskf89ddao0tre0c54.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "325498537816-aetb6rmnps1tvenf411fpn2qv9hju3fn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.tvseries.base"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:325498537816:android:837a85096b2a3dee9f072d",
+        "android_client_info": {
+          "package_name": "com.tvseries.base.qa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "325498537816-lghq3vqicp432dcskf89ddao0tre0c54.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIzpjEjw0sIf9k_pTZ-8gWqNLkLNuq_8Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "325498537816-lghq3vqicp432dcskf89ddao0tre0c54.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "325498537816-aetb6rmnps1tvenf411fpn2qv9hju3fn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.tvseries.base"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

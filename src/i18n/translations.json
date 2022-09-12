@@ -1,0 +1,45 @@
+{
+  "en": {
+    "app": {
+      "screens": {
+        "series_list": {
+          "tv_series": " TV Series",
+          "sub_title": "Find here the best series",
+          "search": "Search Series",
+          "previous_page": "Previous",
+          "next_page": "Next",
+          "page": "Page",
+          "authentication": "Authentication",
+          "set_pin": "Please set a pin code to enter",
+          "enter_pin": "Enter your pin code",
+          "pin_code": "PIN code",
+          "wrong_pin": "Wrong PIN code"
+        },
+        "series_details": {
+          "summary": "Summary:",
+          "read_more": "Read More...",
+          "read_less": "Read Less...",
+          "rating": "Rating: ",
+          "genres": "Genres: ",
+          "schedule": "Schedule: ",
+          "at": "at",
+          "officialSite": "Official Site: ",
+          "num_seasons": "Number of Seasons: ",
+          "episode": "Episode: ",
+          "episodes": "Episodes",
+          "season": "Season: "
+        },
+        "favorites": {
+          "favorites": "Favorites",
+          "no_favorites": "You don't have favorites"
+        },
+        "people": {
+          "people": "People",
+          "search_someone": "Search for someone",
+          "search": "Search",
+          "cast_credits": "Cast credits"
+        }
+      }
+    }
+  }
+}

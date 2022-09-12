@@ -1,0 +1,2 @@
+/* We need to define this dummy string files otherwise iOS will not consider the app is "ready" for localization. */
+"DUMMY_KEY" = "DUMMY_VALUE";
