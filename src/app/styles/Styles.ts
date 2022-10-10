@@ -1,5 +1,5 @@
-import Colors from '@app/styles/Colors'
-import Fonts from '@assets/fonts'
+import Colors from "@app/styles/Colors";
+import Fonts from "@assets/fonts";
 
 const text = {
   frontTitle: {
@@ -55,9 +55,14 @@ const text = {
     fontSize: 10,
     color: Colors.red,
   },
-}
+  button: {
+    ...Fonts?.roboto.bold,
+    fontSize: 14,
+    color: Colors.white,
+  },
+};
 const Styles = {
   text,
-}
+};
 
-export default Styles
+export default Styles;

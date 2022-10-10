@@ -1,14 +1,20 @@
-import AppLoading from '@app/features/app/AppLoading'
-import FavouritesStack from '@app/navigation/navigators/FavouritesStack'
-import PeopleStack from '@app/navigation/navigators/PeopleStack'
-import SeriesStack from '@app/navigation/navigators/SeriesStack'
-import Colors from '@app/styles/Colors'
-import { IconFavouriteFullColored, IconStarFull, IconTelevision } from '@assets/svgs'
-import { createDrawerNavigator } from '@react-navigation/drawer'
-import React from 'react'
-import { StyleSheet } from 'react-native'
+import AppLoading from "@app/features/app/AppLoading";
+import FavouritesStack from "@app/navigation/navigators/FavouritesStack";
+import PeopleStack from "@app/navigation/navigators/PeopleStack";
+import SeriesStack from "@app/navigation/navigators/SeriesStack";
+import Colors from "@app/styles/Colors";
+import {
+  IconFavouriteFullColored,
+  IconGear,
+  IconStarFull,
+  IconTelevision,
+} from "@assets/svgs";
+import { createDrawerNavigator } from "@react-navigation/drawer";
+import React from "react";
+import { StyleSheet } from "react-native";
+import SettingsStack from "./SettingsStack";
 
-const Drawer = createDrawerNavigator()
+const Drawer = createDrawerNavigator();
 
 const RootStackNavigator = () => {
   return (
@@ -22,31 +28,38 @@ const RootStackNavigator = () => {
         }}
       >
         <Drawer.Screen
-          name={'Series'}
+          name={"Series"}
           component={SeriesStack}
           options={{
             drawerIcon: () => <IconTelevision />,
           }}
         />
         <Drawer.Screen
-          name={'Favorites'}
+          name={"Favorites"}
           component={FavouritesStack}
           options={{
             drawerIcon: () => <IconFavouriteFullColored />,
           }}
         />
         <Drawer.Screen
-          name={'People'}
+          name={"People"}
           component={PeopleStack}
           options={{
             drawerIcon: () => <IconStarFull />,
           }}
         />
+        <Drawer.Screen
+          name={"Update PIN code"}
+          component={SettingsStack}
+          options={{
+            drawerIcon: () => <IconGear height={20} width={20} />,
+          }}
+        />
       </Drawer.Navigator>
       <AppLoading />
     </>
-  )
-}
+  );
+};
 
 const styles = StyleSheet.create({
   drawerStyle: {
@@ -57,6 +70,6 @@ const styles = StyleSheet.create({
     borderBottomRightRadius: 25,
     borderTopRightRadius: 25,
   },
-})
+});
 
-export default RootStackNavigator
+export default RootStackNavigator;

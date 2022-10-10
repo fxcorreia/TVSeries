@@ -38,6 +38,15 @@
           "search_someone": "Search for someone",
           "search": "Search",
           "cast_credits": "Cast credits"
+        },
+        "settings":{
+          "update_pincode_screen":"Update PIN code",
+          "actual_pin":"Actual PIN code",
+          "new_pin":"New PIN code",
+          "enter_actual":"Enter actual PIN code",
+          "enter_new":"Enter the new PIN code",
+          "repeat_new":"Repeat the new PIN code",
+          "save":"Save"
         }
       }
     }
