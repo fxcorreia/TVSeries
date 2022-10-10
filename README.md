@@ -25,3 +25,9 @@ Run:
 
     # iOS
     yarn run-ios:base:dev
+
+
+## Accomplishments
+
+All mandatory and bonus features were implemented.
+Was also implemented a Webview screen to show the series's original web page.
