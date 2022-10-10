@@ -41,28 +41,38 @@ const UpdatePinCodeScreen = ({}: Props) => {
   const [actualPin, setActualPin] = useState<string>("");
   const [newPin, setNewPin] = useState<string>("");
   const [savedPinCode, setSavedPinCode] = useState<string>("");
-  const [error, setError] = useState<boolean>(false);
+  const [diffPinError, setDiffPinError] = useState<boolean>(false);
+  const [emptyError, setEmptyError] = useState<boolean>(false);
 
-  const isActualPinEqual = () => {
-    console.log("s");
+  const isActualPinDifferent = () => {
     if (savedPinCode !== actualPin) {
-      console.log("l");
-      setError(true);
-      return false;
-    } else {
-      console.log("k");
+      setDiffPinError(true);
       return true;
+    } else {
+      setDiffPinError(false);
+      return false;
+    }
+  };
+
+  const pinEmpty = () => {
+    if (_.trim(newPin) === "") {
+      setEmptyError(true);
+      return true;
+    } else {
+      setEmptyError(false);
+      return false;
     }
   };
 
   const updatePin = async () => {
-    if (
-      isActualPinEqual() &&
-      _.trim(actualPin) !== "" &&
-      _.trim(newPin) !== ""
-    ) {
-      console.log("update pin");
+    if (!isActualPinDifferent() && !pinEmpty()) {
       await AsyncStorage.setPinCode(newPin);
+
+      setActualPin("");
+      setNewPin("");
+      setSavedPinCode("");
+      setDiffPinError(false);
+      setEmptyError(false);
     }
   };
 
@@ -93,7 +103,9 @@ const UpdatePinCodeScreen = ({}: Props) => {
           <Text style={styles.textSubtitle}>
             {t("screens.settings.enter_actual")}
           </Text>
-          <View style={styles.searchBarContainer}>
+          <View
+            style={[styles.searchBarContainer, diffPinError && styles.error]}
+          >
             <TextInput
               placeholder={t("screens.settings.actual_pin")}
               placeholderTextColor={Colors.primary}
@@ -104,10 +116,15 @@ const UpdatePinCodeScreen = ({}: Props) => {
               onChangeText={(text: string) => setActualPin(text)}
             />
           </View>
-          <Text style={styles.textSubtitle}>
+          {diffPinError && (
+            <Text style={styles.errorText}>
+              {t("screens.settings.pin_dont_match")}
+            </Text>
+          )}
+          <Text style={[styles.textSubtitle, { marginTop: 20 }]}>
             {t("screens.settings.enter_new")}
           </Text>
-          <View style={styles.searchBarContainer}>
+          <View style={[styles.searchBarContainer, emptyError && styles.error]}>
             <TextInput
               placeholder={t("screens.settings.new_pin")}
               placeholderTextColor={Colors.primary}
@@ -118,12 +135,12 @@ const UpdatePinCodeScreen = ({}: Props) => {
               onChangeText={(text: string) => setNewPin(text)}
             />
           </View>
+          {emptyError && (
+            <Text style={styles.errorText}>
+              {t("screens.settings.empty_pin")}
+            </Text>
+          )}
         </View>
-        {error && (
-          <Text style={styles.errorText}>
-            Inputted PINs don`t match with the actual
-          </Text>
-        )}
         <TouchableOpacity
           onPress={updatePin}
           style={styles.button}
@@ -157,7 +174,7 @@ const styles = StyleSheet.create({
     height: 50,
     borderRadius: 20,
     paddingHorizontal: 15,
-    marginBottom: 25,
+
     justifyContent: "center",
   },
   textInput: {
@@ -184,7 +201,12 @@ const styles = StyleSheet.create({
   disable: {
     backgroundColor: Colors.inactive,
   },
+  error: {
+    borderColor: Colors.red,
+    borderWidth: 1,
+  },
   errorText: {
+    fontSize: 10,
     color: "red",
     textAlign: "center",
   },

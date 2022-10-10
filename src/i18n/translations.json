@@ -45,7 +45,8 @@
           "new_pin":"New PIN code",
           "enter_actual":"Enter actual PIN code",
           "enter_new":"Enter the new PIN code",
-          "repeat_new":"Repeat the new PIN code",
+          "pin_dont_match":"PIN don't match",
+          "empty_pin":"Empty PIN code",
           "save":"Save"
         }
       }
