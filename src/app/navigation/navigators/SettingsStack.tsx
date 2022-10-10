@@ -22,21 +22,6 @@ const SettingsStack = () => {
           name={"UpdatePinCodeScreen"}
           component={UpdatePinCodeScreen}
         />
-        {/*<Stack.Screen name={"PeopleScreen"} component={PeopleScreen} />
-        <Stack.Screen
-          name={"PeopleDetailsScreen"}
-          component={PeopleDetailsScreen}
-        />
-        <Stack.Screen name={"SeriesListScreen"} component={SeriesListScreen} />
-        <Stack.Screen
-          name={"SerieDetailsScreen"}
-          component={SerieDetailsScreen}
-        />
-        <Stack.Screen
-          name={"EpisodeDetailsScreen"}
-          component={EpisodeDetailsScreen}
-        />
-        <Stack.Screen name={"WebViewScreen"} component={WebViewScreen} /> */}
       </Stack.Navigator>
     </>
   );
